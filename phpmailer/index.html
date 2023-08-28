@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#000000">
+  <title>Share</title>
+  <link rel="preload" href="fonts/TTFirsNeue-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/TTFirsNeue-Medium.woff" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/media-main.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/MotionPathPlugin.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+<body class="page__body">
+  <div class="site-container">
+    <header class="header">
+  <div class="container">
+    <div class="header__wrapper">
+      <div class="header__logo"><a href="index.html"><img loading="lazy" src="../img/svg/Logo.svg" class="image" width="107" height="56" alt="Logo"></a></div>
+      <nav class="header__menu">
+        <ul>
+          <li class="header__point"><a href="services.html">УСЛУГИ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+          <li class="header__point"><a href="contacts.html">КОНТАКТЫ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+          <span style="left: 16%;"></span>
+          <span style="left: 50%;"></span>
+          <span style="left: 85%;"></span>
+        </label>
+        <ul class="menu__box">
+          <a class="close" href="#header">&times;</a>
+          <li><a class="menu__item" href="services.html">УСЛУГИ</a></li>
+          <li><a class="menu__item" href="contacts.html">КОНТАКТЫ</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <main class="main">
+      <section class="hero">
+        <div class="container">
+          <div class="hero__hidden">
+            <h1 class="hero__title">
+              <span class="hero__letters hero__letters-left">Sha</span>
+              <span class="hero__letters hero__letters-right">re</span>
+            </h1>
+            <video src="img/video.mp4" no-controls autoplay loop playsinline muted class="hero__video"></video>
+            <div class="hero__wrapper">
+              <div class="hero__descr">Креативное агентство</div>
+            </div>
+          </div>
+            <div class="hero__link">
+              <a href="#request" class="hero__present">Обсудить задачи</a>
+              <a href="https://disk.yandex.ru/i/uhq9aClq1WAGtw" target="_blank" class="hero__portfolio">Портфолио в PDF</a>
+            </div>
+        </div>
+      </section>
+      <section class="description">
+        <div class="container">
+          <div class="description__wrapper">
+            <div class="description__title">Мы придумываем креативные решения для бизнеса, <br> бренда, маркетинга, коммуникаций <br> и рекламы.
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="circles">
+        <div class="container">
+          <div class="circles__circle"></div>
+          <div class="circles__wrapper">
+            <div class="circles__text">Делаем важное для брендов, <br>
+              интересным окружающим.
+              </div>
+            <div class="circles__cube"></div>
+          </div>
+        </div>
+      </section>
+      <section class="works">
+        <div class="container">
+          <div class="works__titles">
+            <div class="works__title works__title-grey">
+            МЫ делаем
+            </div>
+            <div class="works__title works__title-dark">
+            МЫ делаем
+            </div>
+          </div>
+          <div class="works__wrapper">
+            <div class="works__deskr">
+              <div class="works__deskr-title">Коммуникации и креатив</div>
+              <div class="works__deskr-subtitle">Стратегии и активации</div>
+            </div>
+            <div class="works__img">
+              <picture>
+                <source srcset="img/magnifying.avif" type="image/avif">
+                <source srcset="img/magnifying.webp" type="image/webp">
+                <img loading="lazy" src="img/magnifying.png" class="image" width="" height="" alt="">
+              </picture>
+            </div>
+          </div>
+          <div class="works__wrapper">
+            <div class="works__deskr">
+              <div class="works__deskr-title">Брендинг</div>
+              <div class="works__deskr-subtitle">В соцсетях и digital</div>
+            </div>
+            <div class="works__img">
+              <picture>
+                <source srcset="img/magnifying.avif" type="image/avif">
+                <source srcset="img/magnifying.webp" type="image/webp">
+                <img loading="lazy" src="img/magnifying.png" class="image" width="" height="" alt="">
+              </picture>
+            </div>
+          </div>
+          <div class="works__wrapper">
+            <div class="works__deskr">
+              <div class="works__deskr-title">Продакшн контента </div>
+              <div class="works__deskr-subtitle">Графика, фото, видео, аудио</div>
+            </div>
+            <div class="works__img">
+              <picture>
+                <source srcset="img/magnifying.avif" type="image/avif">
+                <source srcset="img/magnifying.webp" type="image/webp">
+                <img loading="lazy" src="img/magnifying.png" class="image" width="" height="" alt="">
+              </picture>
+            </div>
+          </div>
+          <div class="works__wrapper">
+            <div class="works__deskr">
+              <div class="works__deskr-title">Продакшн digital</div>
+              <div class="works__deskr-subtitle">Сайты и боты</div>
+            </div>
+            <div class="works__img">
+              <picture>
+                <source srcset="img/magnifying.avif" type="image/avif">
+                <source srcset="img/magnifying.webp" type="image/webp">
+                <img loading="lazy" src="img/magnifying.png" class="image" width="" height="" alt="">
+              </picture>
+            </div>
+          </div>
+          <div class="works__wrapper">
+            <div class="works__deskr">
+              <div class="works__deskr-title">Продвижение</div>
+              <div class="works__deskr-subtitle">В соцсетях и digital</div>
+            </div>
+            <div class="works__img">
+              <picture>
+                <source srcset="img/magnifying.avif" type="image/avif">
+                <source srcset="img/magnifying.webp" type="image/webp">
+                <img loading="lazy" src="img/magnifying.png" class="image" width="" height="" alt="">
+              </picture>
+            </div>
+          </div>
+          <div class="works__wrapper">
+            <div class="works__deskr">
+              <div class="works__deskr-title">Исследования</div>
+              <div class="works__deskr-subtitle">Рынка, аудитории, продукта</div>
+            </div>
+            <div class="works__img">
+              <picture>
+                <source srcset="img/magnifying.avif" type="image/avif">
+                <source srcset="img/magnifying.webp" type="image/webp">
+                <img loading="lazy" src="img/magnifying.png" class="image" width="" height="" alt="">
+              </picture>
+            </div>
+          </div>
+          <div class="works__wrapper">
+            <div class="works__deskr">
+              <div class="works__deskr-title">Улучшения для бизнеса</div>
+              <div class="works__deskr-subtitle">Инновации и улучшения продукта</div>
+            </div>
+            <div class="works__img">
+              <picture>
+                <source srcset="img/magnifying.avif" type="image/avif">
+                <source srcset="img/magnifying.webp" type="image/webp">
+                <img loading="lazy" src="img/magnifying.png" class="image" width="" height="" alt="">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cases">
+        <div class="container">
+          <div class="cases__wrapper">
+          <div class="cases__latter">
+            <div class="cases__cube-vertical-right"><picture class="cases__img-vertical-right">
+              <source srcset="img/Myata.avif" type="image/avif">
+              <source srcset="img/Myata.webp" type="image/webp">
+              <img loading="lazy" src="img/Myata.jpg" class="image" width="" height="" alt="">
+            </picture></div>
+            
+              <div class="cases__latter-vertical-right cases__latter-vertical-right-first">КЕ</div>
+              <div class="cases__latter-vertical-right cases__latter-vertical-right-second">ЙС</div>
+            </div>
+            <div class="cases__descr cases__descr-vertical-right">Маленькое описание кейса будет здесь</div>
+          </div>
+          <div class="cases__wrapper">
+          <div class="cases__latter">
+            <div class="cases__cube-horizontal-left"><picture class="cases__img-horizontal-left">
+              <source srcset="img/Halloween.avif" type="image/avif">
+              <source srcset="img/Halloween.webp" type="image/webp">
+              <img loading="lazy" src="img/Halloween.jpg" class="image" width="" height="" alt="">
+            </picture></div>
+            <div class="cases__latter-horizontal-left cases__latter-horizontal-left-first">КЕ</div>
+            <div class="cases__latter-horizontal-left cases__latter-horizontal-left-second">ЙС</div>
+            <div class="cases__descr cases__descr-horizontal-left">Маленькое описание кейса будет здесь</div>
+          </div>
+          </div>
+          <div class="cases__wrapper">
+          <div class="cases__latter">
+            <div class="cases__cube-vertical-left"><picture class="cases__img-vertical-left">
+              <source srcset="img/Moscow.avif" type="image/avif">
+              <source srcset="img/Moscow.webp" type="image/webp">
+              <img loading="lazy" src="img/Moscow.jpg" class="image" width="" height="" alt="">
+            </picture></div>
+            <div class="cases__latter-vertical-left cases__latter-vertical-left-first">КЕ</div>
+            <div class="cases__latter-vertical-left cases__latter-vertical-left-second">ЙС</div>
+            <div class="cases__descr cases__descr-vertical-left">Маленькое описание кейса будет здесь</div>
+          </div>
+          </div>
+          <div class="cases__wrapper">
+          <div class="cases__latter">
+            <div class="cases__cube-horizontal-right"><picture class="cases__img-horizontal-right">
+              <source srcset="img/magic.avif" type="image/avif">
+              <source srcset="img/magic.webp" type="image/webp">
+              <img loading="lazy" src="img/magic.jpg" class="image" width="" height="" alt="">
+            </picture></div>
+            <div class="cases__latter-horizontal-right cases__latter-horizontal-right-first">КЕ</div>
+            <div class="cases__latter-horizontal-right cases__latter-horizontal-right-second">ЙС</div>
+            <div class="cases__descr cases__descr-horizontal-right">Маленькое описание кейса будет здесь</div>
+          </div>
+          </div>
+          <div class="cases__projects"><a href="#">Все проекты</a></div>
+        </div>
+      </section>
+      <section class="treading-line">
+        <div class="treading-line__wrapper">
+          <div class="marquee" data-direction='right'>
+            <div class="treading-line__line treading-line__line-first">
+              &#9679; 7 лет агентство на московском рынке рекламы &#9679; 7 лет агентство на московском рынке рекламы &#9679; 7 лет агентство на московском рынке рекламы
+            </div>
+          </div>
+        </div>
+        <div class="treading-line__wrapper">
+          <div class="marquee" data-direction='left'>
+            <div class="treading-line__line treading-line__line-second">
+              &#9679; 10 лет средний стаж работы в рекламе руководителей отделов &#9679; 10 лет средний стаж работы в рекламе руководителей отделов &#9679; 10 лет средний стаж работы в рекламе руководителей отделов
+            </div>
+          </div>
+        </div>
+        <div class="treading-line__wrapper">
+          <div class="marquee" data-direction='right'>
+            <div class="treading-line__line treading-line__line-third">
+              &#9679; 15 штатных специалистов в команде &#9679; 15 штатных специалистов в команде &#9679; 15 штатных специалистов в команде
+            </div>
+          </div>
+        </div>
+        <div class="treading-line__wrapper">
+          <div class="marquee" data-direction='left'>
+            <div class="treading-line__line treading-line__line-fourth">
+              &#9679; 900 + подрядчиков в базе по разным направлениям &#9679; 900 + подрядчиков в базе по разным направлениям &#9679; 900 + подрядчиков в базе по разным направлениям
+            </div>
+          </div>
+        </div>
+        <div class="treading-line__wrapper">
+          <div class="marquee" data-direction='right'>
+            <div class="treading-line__line treading-line__line-fifth">
+              &#9679; 50+ брендов из разных сфер с которыми работали &#9679; 50+ брендов из разных сфер с которыми работали &#9679; 50+ брендов из разных сфер с которыми работали
+            </div>
+          </div>
+        </div>
+        <div class="treading-line__more"><a href="#">Подробнее об агентстве</a></div>
+      </section>
+      <section class="clients">
+        <div class="container">
+           <div class="clients__title">наши клиенты</div>
+           <div class="clients__subtitle">Мы создаем креативные решения для брендов, которые вдохновляют, вовлекают и поддерживают отношения с аудиторией.</div>
+           <div class="clients__wrapper">
+              <div class="clients__item1"><img src="img/logo/jalo.png" alt="" class="clients__img"></div>
+              <div class="clients__item2"><img src="img/logo/kaspersy.png" alt="" class="clients__img"></div>
+              <div class="clients__item3"><img src="img/logo/GI.png" alt="" class="clients__img"></div>
+              <div class="clients__item4"><img src="img/logo/yzndex.png" alt="" class="clients__img"></div>
+              <div class="clients__item5"><img src="img/logo/mtv.png" alt="" class="clients__img"></div>
+              <div class="clients__item6"><img src="img/logo/valgeda.png" alt="" class="clients__img"></div>
+              <div class="clients__item7"><img src="img/logo/mb.png" alt="" class="clients__img"></div>
+              <div class="clients__item8"><img src="img/logo/kapo.png" alt="" class="clients__img"></div>
+              <div class="clients__item9"><img src="img/logo/evraz.png" alt="" class="clients__img"></div>
+              <div class="clients__item10"><img src="img/logo/pike.png" alt="" class="clients__img"></div>
+              <div class="clients__item11"><img src="img/logo/mkb.png" alt="" class="clients__img"></div>
+              <div class="clients__item12"><img src="img/logo/bgs.png" alt="" class="clients__img"></div>
+              <div class="clients__item13"><img src="img/logo/prosvechenie.png" alt="" class="clients__img"></div>
+              <div class="clients__item14"><img src="img/logo/knauf.png" alt="" class="clients__img"></div>
+              <div class="clients__item15"><img src="img/logo/cdm.png" alt="" class="clients__img"></div>
+           </div>
+           <div class="clients__descr">В основном работаем со средним и крупным бизнесом, у которых один или несколько брендов в портфеле.
+              Нам интересно инвестировать свое время и усилия в долгосрочные проекты. Мы за комплексный подход и работу на результат.</div>
+        </div>
+     </section>
+     <section id="request" class="request">
+      <div class="container">
+         <form id="form" action="/sendmail.php" method="post" class="request__form" enctype="multipart/form-data">
+            <div class="request__title tr1">ОСТАВЬ ЗАЯВКУ</div>
+            <div class="request__inp tr2"><input class="_req" name="name" required="" placeholder="Имя" type="text"></div>
+            <div class="request__inp tr3"><input class="_req _email" name="mailto" required="" placeholder="EMAIL*" type="email"></div>
+            <div class="request__inp tr4"><input class="_req" id="phone" name="phone" required="" placeholder="Телефон" type="tel"></div>
+            <div class="request__inp request__inp-long tr5"><textarea name="task" required="" placeholder="ОПИШИТЕ ПРОЕКТ" rows="1"></textarea></div>
+            <div class="input__wrapper tr6">
+               <input id="input__file" type="file" name="myfile[]" multiple id="myfile" hidden>
+               <label for="input__file" class="input__file-button">
+                  <span class="input__file-button-text"><span>+</span> Добавить файл-бриф </span>
+               </label>
+               <div id="formPreview" class="formPreview"></div>
+            </div>
+            <input type="checkbox" class="custom-checkbox _req" id="check" name="check" value="yes">
+            <label for="check" class="tr7" required>Я согласен с<a href="#" class="policy"> &nbsp;политикой обработки персональных данных</a></label>
+            <button class="request__btn tr8 _req" name="submit" type="submit" disabled="true" onclick="AjaxFormRequest('messegeResult', 'formMain', 'form.php')">ОТПРАВИТЬ</button>
+         </form>
+         <div class="request__circle"></div>
+         <div class="request__box"></div>
+      </div>
+     </section>
+     <section class="contacts">
+      <div class="container">
+         <div class="contacts__logos">
+            <div class="contacts__logo-circle"></div>
+            <div class="contacts__logo-cube"></div>
+         </div>
+         <div class="contacts__phone"><a href="tel:+74999915300">+7 (499) 991 53 00</a></div>
+         <div class="contacts__mail"><a href="mailto:hello@share-agency.ru">hello@share-agency.ru</a></div>
+         <div class="contacts__adr">г. Москва, Большая Серпуховская 46, стр. 34, офис 15.
+            <a href="https://yandex.ru/maps/-/CCUVyBGd0C">(Посмотреть на карте)</a>
+         </div>
+         <div class="contacts__socials">
+            <div class="contacts__social"><a href="https://t.me/shareagency" target="_blank">TELEGRAM</a></div>
+         </div>
+      </div>
+    </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <nav class="nav">
+          <ul class="footer__items">
+            <li class="links1 arrow"><a href="index.html" class="footer__item">ГЛАВНАЯ</a></li>
+            <li class="links2"><a href="services.html" class="footer__item ">УСЛУГИ</a></li>
+            <li class="links3"><a href="contacts.html" class="footer__item">КОНТАКТЫ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.marquee/1.4.0/jquery.marquee.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+<script src="https://unpkg.com/imask"></script>
+<script src="js/validation.js"></script>
+<script src="js/mask.js"></script>
+<script src="js/form.js"></script>
+<script src="js/parallax.js"></script>
+<script>
+  function AjaxFormRequest(result_id,formMain,url) {
+     jQuery.ajax({
+        url:     url,
+        type:     "POST",
+        dataType: "html",
+        data: jQuery("#"+formMain).serialize(),
+        success: function(response) {
+           document.getElementById(result_id).innerHTML = response;
+        },
+        error: function(response) {
+           document.getElementById(result_id).innerHTML = "Возникла ошибка при отправке формы. Попробуйте еще раз";
+        }
+     });
+  }
+  </script>
+</html>

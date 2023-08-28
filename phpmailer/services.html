@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#000000">
+    <title>Share</title>
+    <link rel="preload" href="fonts/TTFirsNeue-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/TTFirsNeue-Medium.woff" as="font" type="font/woff" crossorigin>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/media-main.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/CSSRulePlugin.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script defer src="js/_services.js"></script>
+  </head>
+
+<body class="page__body">
+  <div class="site-container-services" style="position: sticky; top: 0;">
+    <header class="header">
+  <div class="container">
+    <div class="header__wrapper">
+      <div class="header__logo"><a href="index.html"><img loading="lazy" src="../img/svg/Logo.svg" class="image" width="107" height="56" alt="Logo"></a></div>
+      <nav class="header__menu">
+        <ul>
+          <li class="header__point"><a href="services.html">УСЛУГИ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+          <li class="header__point"><a href="contacts.html">КОНТАКТЫ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+          <span style="left: 16%;"></span>
+          <span style="left: 50%;"></span>
+          <span style="left: 85%;"></span>
+        </label>
+        <ul class="menu__box">
+          <a class="close" href="#header">&times;</a>
+          <li><a class="menu__item" href="services.html">УСЛУГИ</a></li>
+          <li><a class="menu__item" href="contacts.html">КОНТАКТЫ</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <main class="main">
+      <div class="scroll-element">
+         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="60" height="60" x="0" y="0" viewBox="0 0 50 50" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><g id="Icons"><path d="m25 45a14 14 0 0 0 14-14v-12a14 14 0 0 0 -28 0v12a14 14 0 0 0 14 14zm-12-26a12 12 0 0 1 24 0v12a12 12 0 0 1 -24 0z" fill="#c7ff00" data-original="#000000" class=""></path><path d="m24 24.5h.09l.2.21a1 1 0 0 0 1.42 0l.2-.21h.09v-.09l5.71-5.7-1.42-1.42-4.29 4.3v-10.59h-2v10.59l-4.29-4.3-1.42 1.42 5.71 5.7z" fill="#c7ff00" data-original="#000000" class=""></path></g></g></svg>
+      </div>
+      <section class="titles">
+        <div class="container">
+          <h1 class="titles__titles">
+            ПОМОГАЕМ КЛИЕНТУ НА ВСЕХ УРОВНЯХ
+          </h1>
+        </div>
+      </section>
+      <section class="services">
+        <div class="container">
+          <div class="services__items">
+            <div class="services__item services__item-1">БИЗНЕС</div>
+            <div class="services__item services__item-2">МАРКЕТИНГ</div>
+            <div class="services__item services__item-3">БРЕНД</div>
+            <div class="services__item services__item-4">коммуникации</div>
+            <div class="services__item services__item-5">технологии</div>
+            <div class="services__item services__item-6">медиа</div>
+          </div>
+          <div class="services__lines">
+            <hr class="services__line-grey">
+            <hr class="services__line-acid">
+            <a class="services__btn" href="#popup">Заявка</a>
+          </div>
+          <div class="services__wrapper">
+            <div class="services__text">Креативно-продуктовые кампании</div>
+            <div class="services__text">Количественные и качественные исследования</div>
+            <div class="services__text">Бренд-платформа <br>
+              Корпоративный брендинг <br>
+              <span class="services__text-1">
+                // Нейминг <br>// Логотип<br> // Бренд-айдентика <br>
+              </span>
+              Потребительский брендинг <br>
+              Ритейл брендинг<br>
+              Диджитал брендинг</div>
+            <div class="services__text">Коммуникационная стратегия <br>
+              PR-стратегия <br>
+              Креативная концепция <br><span class="services__text-2">
+                // ATL <br>// DIGITAL
+              </span></div>
+            <div class="services__text">
+              <div class="services__text-h-3">Контент продакшн <br>
+                <span class="services__text-3">
+                // Бренд-медиа <br>// Поддержка соц сетей <br>
+                </span>
+              </div>  
+              <div class="services__text-h-4">Видео, фото и аудио-продакшн <br>
+                <span class="services__text-4">
+                // Видеоролик<br>// Анимационный ролик<br>// Фотосъемка<br>// Аудиореклама
+                </span>
+              </div>
+              <div class="services__text-h-5">Дизайн POS, OOH, Retail <br>
+              </div>
+              <div class="services__text-h-6">Digital-продакшн <br>
+                <span class="services__text-6">
+                  // Разработка сайтов<br>// Разработка ботов
+                </span>
+              </div>
+            </div>
+            <div class="services__text">Медиа-стратегия <br>
+              Медиа-сервис <br>
+              Диджитал-стратегия <br>
+              SMM-стратегия <br>
+              Работа с репутацией <br><span class="services__text-7">
+                // Мониторинг упоминаний <br>// Реагирование
+              </span></div>
+          </div>
+        </div>
+        <div class="scroll-element-right">
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="60" height="60" x="0" y="0" viewBox="0 0 50 50" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><g id="Icons"><path d="m25 45a14 14 0 0 0 14-14v-12a14 14 0 0 0 -28 0v12a14 14 0 0 0 14 14zm-12-26a12 12 0 0 1 24 0v12a12 12 0 0 1 -24 0z" fill="#c7ff00" data-original="#000000" class=""></path><path d="m24 24.5h.09l.2.21a1 1 0 0 0 1.42 0l.2-.21h.09v-.09l5.71-5.7-1.42-1.42-4.29 4.3v-10.59h-2v10.59l-4.29-4.3-1.42 1.42 5.71 5.7z" fill="#c7ff00" data-original="#000000" class=""></path></g></g></svg>
+        </div>
+      </section>
+      <section class="titles-mob">
+        <div class="container">
+          <h1 class="titles__titles-mob">
+            ПОМОГАЕМ КЛИЕНТУ НА ВСЕХ УРОВНЯХ
+          </h1>
+        </div>
+      </section>
+      <section class="services-mob">
+        <div class="container">
+          <div class="services__items">
+            <div class="services__item-mob services__item-1">
+              <h2 class="services__title-mob">БИЗНЕС</h2>
+              <p class="services__text-mob">Креативно-продуктовые кампании</p>
+            </div>
+            <div class="services__item-mob services__item-2">
+              <h2 class="services__title-mob">МАРКЕТИНГ</h2>
+              <p class="services__text-mob">Количественные и качественные исследования</p>
+            </div>
+            <div class="services__item-mob services__item-3">
+              <h2 class="services__title-mob">БРЕНД</h2>
+              <p class="services__text-mob">Бренд-платформа</p>
+              <p class="services__text-mob">Корпоративный брендинг
+                <span class="services__text-descr services__text-1">
+                  // Нейминг <br>// Логотип<br> // Бренд-айдентика <br>
+                </span>
+              </p>
+              <p class="services__text-mob">Потребительский брендинг</p>
+              <p class="services__text-mob">Ритейл брендинг</p>
+              <p class="services__text-mob">Диджитал брендинг</p>
+              </p>
+            </div>
+            <div class="services__item-mob services__item-4">
+              <h2 class="services__title-mob">коммуникации</h2>
+              <p class="services__text-mob">Коммуникационная стратегия</p>
+              <p class="services__text-mob">PR-стратегия</p>
+              <p class="services__text-mob">Креативная концепция
+                <span class="services__text-descr services__text-2">
+                  // ATL <br>// DIGITAL
+                </span>
+              </p>
+            </div>
+            <div class="services__item-mob services__item-5">
+              <h2 class="services__title-mob">технологии</h2>
+              <p class="services__text-mob">Контент продакшн
+                  <span class="services__text-descr services__text-3">
+                  // Бренд-медиа <br>// Поддержка соц сетей <br>
+                  </span>
+              </p>
+              <p class="services__text-mob">Видео, фото и аудио-продакшн
+                  <span class="services__text-descr services__text-4">
+                  // Видеоролик<br>// Анимационный ролик<br>// Фотосъемка<br>// Аудиореклама
+                  </span>
+              </p>
+              <p class="services__text-mob">Дизайн POS, OOH, Retail</p>
+              <p class="services__text-mob">Digital-продакшн
+                  <span class="services__text-descr services__text-6">
+                    // Разработка сайтов<br>// Разработка ботов
+                  </span>
+              </p>
+            </div>
+            <div class="services__item-mob services__item-6">
+              <h2 class="services__title-mob">медиа</h2>
+              <p class="services__text-mob">Медиа-стратегия</p>
+              <p class="services__text-mob">Медиа-сервис</p>
+              <p class="services__text-mob">Диджитал-стратегия</p>
+              <p class="services__text-mob">SMM-стратегия</p>
+              <p class="services__text-mob">Работа с репутацией 
+                <span class="services__text-descr services__text-7">
+                  // Мониторинг упоминаний <br>// Реагирование
+                </span>
+              </p>
+            </div>
+            <a class="services__btn-mob" href="#popup">Заявка</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="dark-hidden"></div>
+    <div id="popup" class="popup">
+      <form id="" action="/sendmail.php" method="post" class="popup__form" enctype="multipart/form-data">
+        <a class="close" href="#header">&times;</a>
+        <div class="popup__title tr1">ОСТАВЬ ЗАЯВКУ</div>
+            <div class="popup__inp tr2"><input class="_req" name="name" required="" placeholder="Имя" type="text"></div>
+            <div class="popup__inp tr3"><input class="_req _email" name="mailto" required="" placeholder="EMAIL*" type="email"></div>
+            <div class="popup__inp tr4"><input class="_req" name="phone" required="" placeholder="Телефон" type="tel"></div>
+            <div class="popup__inp popup__inp-long tr5"><textarea name="task" required="" placeholder="ОПИШИТЕ ПРОЕКТ" rows="1"></textarea></div>
+            <div class="popup__wrapper tr6">
+               <input id="popup__file" type="file" name="myfile[]" multiple id="myfile" hidden>
+               <label for="popup__file" class="popup__file-button">
+                  <span class="popup__file-button-text"><span>+</span> Добавить файл-бриф </span>
+               </label>
+               <div id="formPreview" class="formPreview"></div>
+            </div>
+            <input type="checkbox" class="custom-checkbox _req" id="check" name="check" value="yes">
+            <label for="check" class="tr7" required>Я согласен с<a href="#" class="policy"> &nbsp;политикой обработки персональных данных</a></label>
+            <button class="popup__btn tr8 _req" name="submit" type="submit" disabled="true">ОТПРАВИТЬ</button>
+     </form>
+    </div>
+    <script src="js/form.js"></script>
+</body>
+</html>

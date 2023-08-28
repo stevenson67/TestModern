@@ -1,0 +1,20 @@
+/*--страница услуг--*/
+.site-container {
+    overflow: hidden;
+  }
+  @media (max-width: 2560px) {
+    .site-container {
+      height: 1200px;
+    }
+  }
+  @media (max-width: 1920px) {
+    .site-container {
+      height: 968px;
+    }
+  }
+  @media (max-width: 1440px) {
+    .site-container {
+      height: 880px;
+    }
+  }
+  
