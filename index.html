@@ -20,9 +20,86 @@
   <link rel="stylesheet" href="css/main.css">
 
   <meta name="theme-color" content="#fafafa">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
+<script>
+  $(document).ready(function() {
+    // Функция для отправки письма через PHPMailer
+    function sendEmail() {
+      // Создание объекта FormData для последующей отправки данных формы
+      var formData = new FormData($(".writeUs_form")[0]);
+
+      // Отправка данных формы на сервер
+      $.ajax({
+        url: "send-email.php", // Путь к файлу на сервере, который будет обрабатывать отправку письма
+        type: "POST",
+        data: formData,
+        contentType: false,
+        processData: false,
+        success: function(response) {
+          // Отображение попапа
+          $(".popup").fadeIn();
+
+          // Закрытие попапа через 3 секунды
+          setTimeout(function() {
+            $(".popup").fadeOut();
+          }, 3000);
+
+          // Очистка полей формы
+          $(".writeUs_form").trigger("reset");
+        },
+        error: function() {
+          $(".error").text("Error sending the form. Please try again later");
+        }
+      });
+    }
+
+    // Функция для валидации полей формы
+    function validateForm() {
+      var fields = ["subject", "email", "name", "question"];
+      var isValid = true; // Переменная для отслеживания валидности формы
+
+      for (var i = 0; i < fields.length; i++) {
+        var field = $("#" + fields[i]).val();
+        if (field === "") {
+          $("#" + fields[i]).addClass("invalid");
+          $(".error").text("* required fields");
+          isValid = false;
+        } else {
+          $("#" + fields[i]).removeClass("invalid");
+        }
+      }
+
+      return isValid;
+    }
+
+    $(".writeUs_form").submit(function(e) {
+      e.preventDefault();
+
+      if (!validateForm()) {
+        return;
+      }
+
+      sendEmail();
+    });
+
+// Добавление класса "invalid" ко всем input при клике на кнопку отправки формы
+    $(".submit_btn").click(function() {
+      $("input").each(function() {
+        if ($(this).val() === "") {
+          $(this).addClass("invalid");
+        } else {
+          $(this).removeClass("invalid");
+        }
+      });
+    });
+  });
+
+</script>
+
 <header class="header">
   <div class="container">
     <div class="header-wrap">
@@ -74,7 +151,7 @@
             <label for="subject">Subject<span>*</span>:</label>
             <div class="writeUs_form-input">
               <select id="subject" name="subject" class="field">
-                <option value="subject" disabled selected>Select your option</option>
+                <option value="" disabled selected>Select your option</option>
                 <option value="choosing">Choosing Credit Card</option>
                 <option value="credit">Credit Card Application Problems</option>
                 <option value="earning">Earning and Redeeming Rewards</option>
@@ -87,33 +164,38 @@
           <div class="writeUs_form-item">
             <label for="email">E-mail<span>*</span>:</label>
             <div class="writeUs_form-input">
-              <input  type="email" id="email" class="field">
+              <input type="email" id="email" name="email" class="field">
             </div>
           </div>
           <div class="writeUs_form-item">
             <label for="name">Name<span>*</span>:</label>
             <div class="writeUs_form-input">
-              <input type="text" id="name" class="field">
+              <input type="text" id="name" name="name" class="field">
             </div>
           </div>
           <div class="writeUs_form-item">
             <label for="phone">Phone number:</label>
             <div class="writeUs_form-input">
-              <input type="tel" id="phone">
+              <input type="tel" id="phone" name="phone">
             </div>
           </div>
           <div class="writeUs_form-item">
             <label for="question">Question<span>*</span>:</label>
             <div class="writeUs_form-input">
-              <textarea id="question" class="field" rows="7"></textarea>
+              <textarea id="question" class="field" name="question" rows="7"></textarea>
             </div>
           </div>
           <div class="writeUs_form-item">
             <div></div>
             <div class="writeUs_form-btn">
               <div class="error"></div>
-              <button class="writeUs_form-send">Send</button>
+              <button class="writeUs_form-send" name="submit" type="submit">Send</button>
             </div>
+          </div>
+          <div class="popup">
+            <h2>Thanks for your question!</h2>
+            <p>Our experts will reply you by email as soon as possible.</p>
+            <img src="../img/close.svg">
           </div>
         </form>
         <div class="writeUs_form-info">
@@ -259,7 +341,6 @@
   </div>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="js/vendor/modernizr-3.11.2.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
