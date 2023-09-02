@@ -1,55 +1,71 @@
-// // Получаем форму, кнопку отправки и элемент для вывода ошибок
-// const form = document.querySelector('.writeUs_form');
-// const submitButton = document.querySelector('.writeUs_form-send');
-// const errorContainer = document.querySelector('.error');
-//
-// // Обработчик события отправки формы
-// form.addEventListener('submit', (e) => {
-//   e.preventDefault(); // Отменяем стандартное поведение отправки формы
-//
-//   // Проверяем валидность полей
-//   const subjectField = document.getElementById('subject');
-//   const emailField = document.getElementById('email');
-//   const nameField = document.getElementById('name');
-//   const questionField = document.getElementById('question');
-//
-//   let isValid = true;
-//
-//   if (subjectField.value === 'subject') {
-//     isValid = false;
-//     subjectField.classList.add('invalid');
-//   } else {
-//     subjectField.classList.remove('invalid');
-//   }
-//
-//   if (emailField.value === '') {
-//     isValid = false;
-//     emailField.classList.add('invalid');
-//   } else {
-//     emailField.classList.remove('invalid');
-//   }
-//
-//   if (nameField.value === '') {
-//     isValid = false;
-//     nameField.classList.add('invalid');
-//   } else {
-//     nameField.classList.remove('invalid');
-//   }
-//
-//   if (questionField.value === '') {
-//     isValid = false;
-//     questionField.classList.add('invalid');
-//   } else {
-//     questionField.classList.remove('invalid');
-//   }
-//
-//   // Если есть незаполненные поля, выводим сообщение об ошибке
-//   if (!isValid) {
-//     errorContainer.textContent = '* required fields';
-//   } else {
-//     // Если все поля заполнены, очищаем сообщение об ошибке и отправляем форму
-//     errorContainer.textContent = '';
-//     form.submit();
-//   }
-// });
+$(document).ready(function() {
+  // Функция для отправки письма через PHPMailer
+  function sendEmail() {
+    // Создание объекта FormData для последующей отправки данных формы
+    var formData = new FormData($(".writeUs_form")[0]);
 
+    // Отправка данных формы на сервер
+    $.ajax({
+      url: "send-email.php", // Путь к файлу на сервере, который будет обрабатывать отправку письма
+      type: "POST",
+      data: formData,
+      contentType: false,
+      processData: false,
+      success: function(response) {
+        // Отображение попапа
+        $(".popup").fadeIn();
+
+        // Закрытие попапа через 3 секунды
+        setTimeout(function() {
+          $(".popup").fadeOut();
+        }, 3000);
+
+        // Очистка полей формы
+        $(".writeUs_form").trigger("reset");
+      },
+      error: function() {
+        $(".error").text("Error sending the form. Please try again later");
+      }
+    });
+  }
+
+  // Функция для валидации полей формы
+  function validateForm() {
+    var fields = ["subject", "email", "name", "question"];
+    var isValid = true; // Переменная для отслеживания валидности формы
+
+    for (var i = 0; i < fields.length; i++) {
+      var field = $("#" + fields[i]).val();
+      if (field === "") {
+        $("#" + fields[i]).addClass("invalid");
+        $(".error").text("* required fields");
+        isValid = false;
+      } else {
+        $("#" + fields[i]).removeClass("invalid");
+      }
+    }
+
+    return isValid;
+  }
+
+  $(".writeUs_form").submit(function(e) {
+    e.preventDefault();
+
+    if (!validateForm()) {
+      return;
+    }
+
+    sendEmail();
+  });
+
+// Добавление класса "invalid" ко всем input при клике на кнопку отправки формы
+  $(".submit_btn").click(function() {
+    $("input").each(function() {
+      if ($(this).val() === "") {
+        $(this).addClass("invalid");
+      } else {
+        $(this).removeClass("invalid");
+      }
+    });
+  });
+});
