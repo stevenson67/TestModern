@@ -1,3 +1,5 @@
+$("#phone").mask("1-999-999-9999",{placeholder:"X"});
+
 $(document).ready(function() {
   // Функция для отправки письма через PHPMailer
   function sendEmail() {
@@ -42,6 +44,7 @@ $(document).ready(function() {
         isValid = false;
       } else {
         $("#" + fields[i]).removeClass("invalid");
+        $(".error").text(" ");
       }
     }
 

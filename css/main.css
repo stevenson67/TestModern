@@ -12,7 +12,7 @@
    ========================================================================== */
 
 html {
-  color: #222;
+  color: #4D4D4D;
   font-family: Arial;
   font-size: 1em;
   line-height: 1.4;
@@ -209,6 +209,7 @@ textarea {
     text-decoration: underline;
   }
 
+
   a[href]::after {
     content: " (" attr(href) ")";
   }
@@ -265,12 +266,29 @@ textarea {
 a, a:link, a:visited  {
   text-decoration: none;
 }
+a:hover {
+  text-decoration: underline;
+}
 
 span {
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
 }
+
+input, select, textarea {
+  border: 1px solid #B3B3B3;
+  padding: 6px 10px;
+  color: #B3B3B3;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/*select::-ms-expand {*/
+/*  display: none;*/
+/*}*/
 
 .container {
   max-width: calc(1480px + 40px);
@@ -292,7 +310,7 @@ span {
   padding: 24px 0;
 }
 .header_logo img {
-  width: 408px;
+  width: 100%;
   height: 49px;
 }
 .header_menu {
@@ -302,8 +320,21 @@ span {
   display: flex;
   align-items: flex-end;
 }
+.header_menu-search {
+  position: relative;
+}
+.header_menu-search input {
+  width: 266px;
+}
+.header_menu-search button {
+  position: absolute;
+  right: 0; top: 0;
+  height: 100%;
+  border: 0;
+  background: #009EE8;
+}
 
-/*CONTACT*/
+  /*CONTACT*/
 
 .contact {
   background-image: url('../img/bg_contact.jpg');
@@ -319,9 +350,6 @@ span {
   line-height: normal;
   transition: all 0.3s;
 }
-.contact_breadcrumbs a:hover {
-  text-decoration: underline;
-}
 .contact_info {
   display: flex;
   gap: 30px;
@@ -329,6 +357,14 @@ span {
 }
 
 /*WRITE-US*/
+.writeUs-title {
+  color: #009EE8;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 60px 0;
+}
 .writeUs-wrap {
   display: flex;
   gap: 60px;
@@ -339,15 +375,6 @@ span {
   gap: 20px;
   width: 50%;
 }
-input, select, textarea {
-  border: 1px solid #B3B3B3;
-  padding: 7px 10px;
-  color: #B3B3B3;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
 .writeUs_form-item {
   display: flex;
   justify-content: space-between;
@@ -355,6 +382,19 @@ input, select, textarea {
 .writeUs_form-item span {
   color: #EF5C53;
 }
+/*.writeUs_form-input select {*/
+/*  appearance: none;*/
+/*  background-image: none;*/
+/*  cursor: pointer;*/
+/*}*/
+/*.writeUs_form-input select:before {*/
+/*  content: '';*/
+/*  position: absolute;*/
+/*  right: 0; top: 0;*/
+/*  width: 32px;*/
+/*  height: 100%;*/
+/*  background: url("img/arrow-select.svg");*/
+/*}*/
 .writeUs_form-input, .writeUs_form-btn {
   width: 500px;
   display: flex;
@@ -453,6 +493,15 @@ input, select, textarea {
 }
 
 /*BANKS*/
+.banks-title {
+  color: #4D4D4D;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 60px;
+}
 .banks-items {
   display: flex;
   flex-wrap: wrap;
@@ -499,17 +548,22 @@ input, select, textarea {
   justify-content: space-between;
   position: relative;
 }
-.footer-wrap:before, .footer-wrap:after  {
+.footer-border {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.footer-border:before, .footer-border:after  {
   content: '';
   position: absolute;
   width: 100%;
   left: 0px;
 }
-.footer-wrap:before {
+.footer-border:before {
   bottom: 0;
   border-bottom: 1px solid #262626;
 }
-.footer-wrap:after {
+.footer-border:after {
   bottom: -4px;
   border-bottom: 1px solid rgba(250, 244, 240, 0.50);
 }
@@ -518,6 +572,12 @@ input, select, textarea {
   flex-direction: column;
   gap: 24px;
 }
+.footer-logo p {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 .footer-logo img {
   width: 215px;
   height: 41px;
@@ -525,4 +585,33 @@ input, select, textarea {
 .footer_menu {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+.footer_menu-items {
+  display: flex;
+  gap: 30px;
+}
+.footer_menu-items a {
+  color: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.footer_menu-social {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+.footer_menu-social p {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.footer-info {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
