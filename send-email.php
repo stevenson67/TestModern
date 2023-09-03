@@ -1,18 +1,17 @@
 <?php
 
-// Файлы phpmailer
 require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
-// Переменные, которые отправляет пользователь
+
 $subject = $_POST['subject'];
 $email = $_POST['email'];
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $question = $_POST['question'];
 $msg = '';
-// Формирование самого письма
+
 $title = "Заголовок письма";
 $body = "
 <h2>Новое письмо</h2>
@@ -23,7 +22,6 @@ $phone<br>
 $question<br>
 ";
 
-// Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 try {
   $mail->isSMTP();
@@ -49,32 +47,17 @@ try {
   );
 
   $mail->setFrom('share.410web@gmail.com', 'Question');
-  // Получатели
+
   $mail->addAddress('kingofguns066@gmail.com');
-  //$mail->addAddress('nb@share-agency.ru');
 
 
-  // Прикрипление файлов к письму
-//  if (!empty($_FILES['myfile']['name'][0])) {
-//    foreach ($_FILES['myfile']['name'] as $key => $value) {
-//      $out_files[] = array("name"=>$_FILES['myfile']['name'][$key], "tmp_name" => $_FILES['myfile']['tmp_name'][$key]);
-//    }
-//    $filesSend = true;
-//  } else {
-//    $filesSend = false;
-//  }
-//  if ($filesSend) {
-//    foreach ($out_files as $k=>$v) {
-//      $mail->AddAttachment($out_files[$k]['tmp_name'], $out_files[$k]['name']);
-//    }
-//  }
 
-// Отправка сообщения
+
   $mail->isHTML(true);
   $mail->Subject = $title;
   $mail->Body = $body;
 
-// Проверяем отравленность сообщения
+
   if ($mail->send()) {$result = "success";}
   else {$result = "error";}
 
@@ -82,4 +65,3 @@ try {
   echo $e-> getMessage();;
 }
 
-?>

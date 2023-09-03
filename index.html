@@ -32,13 +32,15 @@
         <img src="img/logo-3.svg">
       </a>
       <div class="header_menu">
-        <div class="header_menu-item">
-          <span>PREPAID & CREDIT OFFERS</span>
-          <img src="img/arrow_down.svg">
-        </div>
-        <div class="header_menu-item">
-          <span>RESOURCES</span>
-          <img src="img/arrow_down.svg">
+        <div class="header_menu-items">
+          <div class="header_menu-item">
+            <span>PREPAID & CREDIT OFFERS</span>
+            <img src="img/arrow_down.svg">
+          </div>
+          <div class="header_menu-item">
+            <span>RESOURCES</span>
+            <img src="img/arrow_down.svg">
+          </div>
         </div>
         <div class="header_menu-search">
           <input type="search" id="site-search" name="q" />
@@ -127,7 +129,7 @@
           <div class="popup">
             <h2>Thanks for your question!</h2>
             <p>Our experts will reply you by email as soon as possible.</p>
-            <img src="../img/close.svg">
+            <img class="popup-close" src="../img/close.svg">
           </div>
         </form>
         <div class="writeUs_form-info">
@@ -160,7 +162,7 @@
       <div class="banks-items">
         <div class="banks-item">
           <img class="banks-item-logo" src="img/bank/bofi.svg">
-          <img src="img/Line%202.svg">
+          <img class="banks-item-arrow" src="img/Line%202.svg">
           <div class="banks-item-text">
             <h3>BOFI:</h3>
             <p>Customer Service:<br>
@@ -169,7 +171,7 @@
         </div>
         <div class="banks-item">
           <img class="banks-item-logo" src="img/bank/capital.svg">
-          <img src="img/Line%202.svg">
+          <img class="banks-item-arrow" src="img/Line%202.svg">
           <div class="banks-item-text">
             <h3>CAPITAL ONE®:</h3>
             <p>Customer Service:<br>
@@ -178,7 +180,7 @@
         </div>
         <div class="banks-item">
           <img class="banks-item-logo" src="img/bank/capital2.svg">
-          <img src="img/Line%202.svg">
+          <img class="banks-item-arrow" src="img/Line%202.svg">
           <div class="banks-item-text">
             <h3>CAPITAL BANK:</h3>
             <p>Customer Service:<br>
@@ -187,9 +189,9 @@
         </div>
         <div class="banks-item">
           <img class="banks-item-logo" src="img/bank/credit.svg">
-          <img src="img/Line%202.svg">
+          <img class="banks-item-arrow" src="img/Line%202.svg">
           <div class="banks-item-text">
-            <h3>CREDIT ONE BANK®:</h3>
+            <h3>CREDIT ONE <br>BANK®:</h3>
             <p>Customer Service:<br>
               <span>800-955-7070</span></p>
           </div>
@@ -198,7 +200,7 @@
       <div class="banks-items">
         <div class="banks-item">
           <img class="banks-item-logo" src="img/bank/meta.svg">
-          <img src="img/Line%202.svg">
+          <img class="banks-item-arrow" src="img/Line%202.svg">
           <div class="banks-item-text">
             <h3>METABANK:</h3>
             <p>Customer Service:<br>
@@ -207,17 +209,16 @@
         </div>
         <div class="banks-item">
           <img class="banks-item-logo" src="img/bank/mid.svg">
-          <img src="img/Line%202.svg">
+          <img class="banks-item-arrow" src="img/Line%202.svg">
           <div class="banks-item-text">
-            <h3>MID AMERICA
-              BANK:</h3>
+            <h3>MID AMERICA<br>BANK:</h3>
             <p>Customer Service:<br>
               <span>800-955-7070</span></p>
           </div>
         </div>
         <div class="banks-item">
           <img class="banks-item-logo" src="img/bank/simmons.svg">
-          <img src="img/Line%202.svg">
+          <img class="banks-item-arrow" src="img/Line%202.svg">
           <div class="banks-item-text">
             <h3>SIMMONS FIRST:</h3>
             <p>Customer Service:<br>
@@ -226,7 +227,7 @@
         </div>
         <div class="banks-item">
           <img class="banks-item-logo" src="img/bank/usa.svg">
-          <img src="img/Line%202.svg">
+          <img class="banks-item-arrow" src="img/Line%202.svg">
           <div class="banks-item-text">
             <h3>USAA:</h3>
             <p>Customer Service:<br>
@@ -242,7 +243,8 @@
   <div class="container">
     <div class="footer-wrap">
       <div class="footer-logo">
-        <img src="img/logo-footer.svg">
+        <img class="footer-logo-desk" src="img/logo-footer.svg">
+        <img class="footer-logo-mob mobile" src="img/logo-2.svg">
         <p>Copyright © 2015 DreamCreditMaker.com.<br>
           All Rights Reserved.</p>
       </div>
@@ -256,11 +258,16 @@
         </div>
         <div class="footer_menu-social">
           <p>FOLLOW US:</p>
-          <img src="img/social/ic24-facebook.svg">
-          <img src="img/social/ic24-twitter.svg">
-          <img src="img/social/ic24-google.svg">
+          <div class="footer_menu-social-icon">
+            <img src="img/social/ic24-facebook.svg">
+            <img src="img/social/ic24-twitter.svg">
+            <img src="img/social/ic24-google.svg">
+          </div>
         </div>
       </div>
+      <p class="mobile">
+        Copyright © 2015 DreamCreditMaker.com. All Rights Reserved.
+      </p>
     </div>
   </div>
   <div class="footer-border"></div>
